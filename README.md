@@ -1,20 +1,14 @@
 # Cartoon Tower Defense
 
-Projeto de game 3D estilo cartoon desenvolvido com Unity + C# + VS Code.
+Projeto de jogo 3D Tower Defense em Unity com arquitetura modular, fluxo de trabalho Git e automações PowerShell.
 
-O objetivo é criar um jogo Tower Defense procedural e expansível, com:
-- torres rotativas 360°
-- inimigos com IA
-- sistema de ondas
-- disparos e projéteis
-- visual cartoon estilizado
-- arquitetura modular
-- integração com GitHub
-- automações PowerShell
+## Visão Geral
 
----
+- Projeto Unity: `unity/CartoonTowerDefense`
+- Repositório: `cartoon-tower-defense`
+- Foco: torres rotativas, ondas de inimigos, IA, sistema procedural e estilo cartoon
 
-# Tecnologias
+## Tecnologias
 
 - Unity 6+
 - Universal Render Pipeline (URP)
@@ -22,241 +16,40 @@ O objetivo é criar um jogo Tower Defense procedural e expansível, com:
 - Visual Studio Code
 - Git + GitHub
 - PowerShell
-- Blender (futuramente para assets)
 
----
+## Estrutura do Repositório
 
-# Estrutura do Projeto
+- `docs/` — documentação do projeto
+- `unity/CartoonTowerDefense/` — projeto Unity principal
+- `assets-source/` — fontes e conceitos de asset
+- `scripts/` — ferramentas e build scripts
+- `prototypes/` — experimentos e provas de conceito
+- `setup-project.ps1` — inicialização do repositório
+- `git-auto-push.ps1` — commit e push automatizados
 
-```text
-cartoon-tower-defense/
-│
-├── docs/
-│   ├── roadmap.md
-│   ├── gameplay.md
-│   ├── architecture.md
-│   └── art-direction.md
-│
-├── unity/
-│   └── CartoonTowerDefense/
-│       ├── Assets/
-│       ├── Packages/
-│       ├── ProjectSettings/
-│       └── UserSettings/
-│
-├── assets-source/
-│   ├── blender/
-│   ├── textures/
-│   ├── concepts/
-│   └── audio/
-│
-├── scripts/
-│   ├── tools/
-│   └── build/
-│
-├── prototypes/
-│
-├── setup-project.ps1
-├── git-auto-push.ps1
-├── .gitignore
-└── README.md
-```
+## Configuração
 
----
+1. Abra o projeto no Unity Hub em `unity/CartoonTowerDefense`
+2. Abra o repositório na raiz em VS Code
+3. Execute `setup-project.ps1` para preparar a estrutura inicial
 
-# Organização
+## Scripts principais
 
-## Repositório principal
+- `setup-project.ps1`: configura pastas, documentação e `.gitignore`
+- `git-auto-push.ps1`: detecta alterações, faz commit e envia para o repositório remoto
 
-O repositório Git controla TODO o projeto a partir da raiz:
+## Fluxo de Trabalho
 
-```text
-cartoon-tower-defense
-```
+1. Desenvolva no Unity em `unity/CartoonTowerDefense`
+2. Mantenha o VS Code aberto na raiz do repositório
+3. Teste no editor Unity
+4. Use Git regularmente e execute `git-auto-push.ps1` para atualizar o remoto
 
-O projeto Unity NÃO possui repositório Git separado.
+## Direção do Projeto
 
----
-
-# Projeto Unity
-
-O projeto Unity real fica em:
-
-```text
-unity/CartoonTowerDefense
-```
-
-O Unity Hub deve abrir ESTA pasta.
-
----
-
-# VS Code
-
-O VS Code deve abrir a RAIZ do repositório:
-
-```text
-cartoon-tower-defense
-```
-
-Isso garante:
-- Git funcionando corretamente
-- acesso aos scripts PS1
-- acesso à documentação
-- melhor integração com IA
-- organização profissional
-
----
-
-# Como Criar o Projeto Unity
-
-## Unity Hub
-
-Template recomendado:
-
-```text
-Universal 3D
-```
-
-Provider recomendado:
-
-```text
-None
-```
-
-O GitHub NÃO deve ser selecionado no Unity Hub.
-
-O repositório Git já foi criado manualmente.
-
----
-
-# Scripts PowerShell
-
-## setup-project.ps1
-
-Responsável por:
-- criar estrutura de pastas
-- criar documentação inicial
-- gerar `.gitignore`
-
-Execução:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\setup-project.ps1
-```
-
----
-
-## git-auto-push.ps1
-
-Responsável por:
-- detectar alterações
-- executar git add
-- executar commit automático
-- executar git push
-- mostrar erros detalhados
-
-Execução:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\git-auto-push.ps1
-```
-
----
-
-# Fluxo de Trabalho
-
-## Desenvolvimento
-
-1. Abrir Unity Hub
-2. Abrir:
-   ```text
-   unity/CartoonTowerDefense
-   ```
-
-3. Abrir VS Code na raiz:
-   ```text
-   cartoon-tower-defense
-   ```
-
-4. Desenvolver normalmente
-
-5. Executar:
-   ```powershell
-   .\git-auto-push.ps1
-   ```
-
----
-
-# Objetivos do Projeto
-
-## Gameplay
-
-- Tower Defense
-- Canhões rotativos
-- Sistema de mira
-- Ondas de inimigos
-- Sistema procedural
-- Upgrade de torres
-- IA básica e avançada
-
----
-
-# Direção de Arte
-
-Estilo:
-- cartoon
-- divertido
-- legível
-- colorido
-- atrativo para jovens e adultos
-
-Referências:
-- Orcs Must Die
-- Kingdom Rush
-- Dungeon Defenders
-- Team Fortress stylized props
-
----
-
-# Roadmap Inicial
-
-## Fase 1 — Protótipo
-
-- [ ] Torre procedural
-- [ ] Rotação 360°
-- [ ] Disparo
-- [ ] Inimigo simples
-- [ ] Sistema de colisão
-
----
-
-## Fase 2 — Gameplay
-
-- [ ] Sistema de waves
-- [ ] Pathfinding
-- [ ] Vida dos inimigos
-- [ ] Upgrade de torres
-- [ ] HUD
-
----
-
-## Fase 3 — Visual
-
-- [ ] Shaders cartoon
-- [ ] Partículas
-- [ ] Sons
-- [ ] Animações
-- [ ] Assets 3D reais
-
----
-
-## Fase 4 — Expansão
-
-- [ ] Multiplayer
-- [ ] Mobile build
-- [ ] Steam build
-- [ ] Loja interna
-- [ ] Save system
+- Estilo visual: cartoon, limpo e colorido
+- Experiência: acessível, escalável e iterativa
+- Prioridade: protótipo funcional antes de expandir para visual e recursos avançados
 
 ---
 
@@ -297,16 +90,150 @@ Existe apenas UM repositório Git:
 
 ---
 
-# Próximos Passos
+# Status Atual
 
-1. Criar primeira torre procedural
-2. Criar sistema de rotação
-3. Criar disparo
-4. Criar alvo básico
-5. Criar primeira cena jogável
+Protótipo inicial funcional concluído com:
+- rotação 360°
+- disparo procedural
+- prefab de projétil
+- integração Unity + VS Code + GitHub
+- workflow automatizado via PowerShell
+
+O projeto encontra-se pronto para iniciar:
+- IA básica
+- sistema real de Tower Defense
+- gameplay expandido
+- ambiente 3D
+- direção artística definitiva
+# Autor
+
+Projeto iniciado por Sidney S. C. Viana com arquitetura assistida por IA.
+
+# Estado Atual do Projeto
+
+O projeto já possui um primeiro protótipo funcional dentro da Unity.
 
 ---
 
-# Autor
+## Torre
 
-Projeto iniciado por Sidney com arquitetura assistida por IA.
+A torre foi criada proceduralmente utilizando:
+- Cylinder
+- Empty Objects
+- Hierarquia modular
+
+Estrutura atual:
+
+```text
+TowerRoot
+├── BaseTower
+├── TurretPivot
+│   ├── CannonBody
+│   └── FirePoint
+```
+
+---
+
+## Rotação
+
+O pivô:
+
+```text
+TurretPivot
+```
+
+realiza rotação contínua 360° usando:
+
+```text
+TowerRotation.cs
+```
+
+---
+
+## Sistema de Disparo
+
+O sistema de disparo já:
+- instancia projéteis
+- utiliza prefab
+- utiliza FirePoint
+- dispara automaticamente
+
+Scripts atuais:
+- SimpleShooter.cs
+- Projectile.cs
+
+---
+
+## Projéteis
+
+Os projéteis:
+- possuem Rigidbody
+- possuem Trigger Collider
+- movimentam-se proceduralmente
+- são destruídos ao colidir
+
+---
+
+## Alvo
+
+Existe um alvo inicial:
+
+```text
+TargetDummy
+```
+
+utilizado para:
+- testes
+- colisão
+- futura IA
+
+---
+
+## Conceito Visual
+
+O conceito oficial do canhão encontra-se em:
+
+```text
+assets-source/concepts/
+```
+
+Referência principal:
+- conceitos canhao.png
+
+Estilo:
+- cartoon
+- stylized
+- divertido
+- modular
+- legível
+
+# Próximos Passos
+
+1. Implementar mira automática
+2. Detectar inimigos dentro do range
+3. Criar sistema de dano
+4. Criar destruição de inimigos
+5. Criar sistema de waves
+6. Implementar partículas
+7. Criar materiais cartoon
+8. Iniciar ambiente 3D
+9. Estruturar HUD/UI
+10. Criar inimigos reais
+
+---
+
+# Status Atual
+
+Protótipo inicial funcional concluído com:
+- rotação 360°
+- disparo procedural
+- prefab de projétil
+- integração Unity + VS Code + GitHub
+- workflow automatizado via PowerShell
+
+O projeto encontra-se pronto para iniciar:
+- IA básica
+- sistema real de Tower Defense
+- gameplay expandido
+- ambiente 3D
+- direção artística definitiva
